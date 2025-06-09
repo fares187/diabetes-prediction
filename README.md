@@ -9,9 +9,14 @@ https://github.com/user-attachments/assets/3200c096-3f2d-424b-9757-db4ae70021ed
 ![Python](https://img.shields.io/badge/Python-3.8%2B-blue)
 ![Scikit-learn](https://img.shields.io/badge/Scikit--learn-1.2%2B-orange)
 ![Flask](https://img.shields.io/badge/Flask-2.0%2B-lightgrey)
-![Dataset(kaggle)](https://www.kaggle.com/datasets/alexteboul/diabetes-health-indicators-dataset?select=diabetes_binary_5050split_health_indicators_BRFSS2015.csv)
 
 A machine learning web application that predicts diabetes using SVM.
+
+## Dataset (kaggle)
+
+https://www.kaggle.com/datasets/alexteboul/diabetes-health-indicators-dataset?select=diabetes_binary_5050split_health_indicators_BRFSS2015.csv
+
+
 
 ## Project Overview
 This project implements a complete ML pipeline:
