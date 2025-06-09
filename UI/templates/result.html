@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+{% block head %}
+    <title>Prediction Result</title>
+{% endblock %}
+
+{% block body %}
+<div class="result-container">
+    <h1>Model Prediction Result</h1>
+    
+    <div class="input-summary">
+        <h2>Your Input Values</h2>
+        <table>
+            {% for key, value in form_data.items() %}
+            <tr>
+                <td>{{ key }}</td>
+                <td>
+                    {% if value == 'True' %}
+                        Yes
+                    {% elif value == 'False' %}
+                        No
+                    {% else %}
+                        {{ value }}
+                    {% endif %}
+                </td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+
+    <div class="result-card {% if 'High' in prediction %}high-risk{% else %}low-risk{% endif %}">
+        <h3>Model Prediction:</h3>
+        <div class="prediction-text">
+            {{ prediction }}
+        </div>
+        
+        <div class="action-buttons">
+            <a href="/" class="button-new">
+                <i class="fas fa-redo-alt"></i>
+                New Prediction
+            </a>
+        </div>
+    </div>
+</div>
+{% endblock %}

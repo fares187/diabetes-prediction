@@ -1,0 +1,95 @@
+{% extends 'base.html' %}
+
+{% block head %}
+    <title>Data Computation Project</title>
+{% endblock %}
+
+{% block body %}
+<h1>SVM Model</h1>
+<form action="/submit" method="POST">
+    <table border="1" cellpadding="8">
+      <tr><th>Features</th><th>Input</th></tr>
+  
+      <tr>
+        <td>General Health (1=Excellent to 5=Poor)</td>
+        <td><input type="number" name="GenHlth" min="1" max="5" required></td>
+      </tr>
+  
+      <tr>
+        <td>High Blood Pressure</td>
+        <td>
+          <select name="HighBP" required>
+            <option value="True">Yes</option>
+            <option value="False">No</option>
+          </select>
+        </td>
+      </tr>
+  
+      <tr>
+        <td>Body Mass Index (BMI) (min=12, max=60)</td>
+        <td><input type="number" name="BMI" step="0.1" min="12" max="60" required></td>
+      </tr>
+  
+      <tr>
+        <td>Age Group</td>
+        <td>
+            <select name="Age" required>
+                <option value="1">18–24</option>
+                <option value="2">25–29</option>
+                <option value="3">30–34</option>
+                <option value="4">35–39</option>
+                <option value="5">40–44</option>
+                <option value="6">45–49</option>
+                <option value="7">50–54</option>
+                <option value="8">55–59</option>
+                <option value="9">60–64</option>
+                <option value="10">65–69</option>
+                <option value="11">70–74</option>
+                <option value="12">75–79</option>
+                <option value="13">80 or older</option>
+            </select>
+        </td>
+    </tr>
+    
+  
+      <tr>
+        <td>High Cholesterol</td>
+        <td>
+          <select name="HighChol" required>
+            <option value="True">Yes</option>
+            <option value="False">No</option>
+          </select>
+        </td>
+      </tr>
+  
+      <tr>
+        <td>Difficulty Walking</td>
+        <td>
+          <select name="DiffWalk" required>
+            <option value="True">Yes</option>
+            <option value="False">No</option>
+          </select>
+        </td>
+      </tr>
+  
+      <tr>
+        <td>Heart Disease or Heart Attack</td>
+        <td>
+          <select name="HeartDiseaseorAttack" required>
+            <option value="True">Yes</option>
+            <option value="False">No</option>
+          </select>
+        </td>
+      </tr>
+  
+      <tr>
+        <td>Physical Health (days not good in past 30 days)</td>
+        <td><input type="number" name="PhysHlth" min="0" max="30" required></td>
+      </tr>
+    </table>
+  
+    <br>
+    <input type="submit" value="Submit">
+  </form>
+    
+{% endblock %}
